@@ -1,4 +1,5 @@
 import { EmailTemplate } from '@/components/email-template'
+import { ReactElement } from 'react';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -12,7 +13,7 @@ export async function POST(req: Request) {
       from: 'My portfolio page <onboarding@resend.dev>',
       to: [process.env.MY_EMAIL as string],
       subject: `Message from ${name}, sent through portfollio page`,
-      react: EmailTemplate({ firstName: name, email, message }),
+      react: EmailTemplate({ firstName: name, email, message }) as ReactElement,
     });
 
     if (error) {
