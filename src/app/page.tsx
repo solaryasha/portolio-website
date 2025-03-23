@@ -12,7 +12,7 @@ export default function Page() {
         <div className="container flex h-14 items-center m-auto">
           <div className="mr-4 hidden md:flex">
             <Link className="mr-6 flex items-center space-x-2" href="/">
-              <span className="hidden font-bold sm:inline-block">Solaryasha.dev</span>
+              <span className="hidden font-bold sm:inline-block">solaryasha.dev</span>
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-medium">
               <Link href="#about" className="transition-colors hover:text-foreground/80">
@@ -46,26 +46,20 @@ export default function Page() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Link href="https://github.com" target="_blank">
-                  <Button variant="outline" size="icon">
+                <Link href="https://github.com/solaryasha" target="_blank">
+                  <Button variant="outline" size="icon" className="cursor-pointer">
                     <Github className="h-4 w-4" />
                     <span className="sr-only">GitHub</span>
                   </Button>
                 </Link>
-                <Link href="https://linkedin.com" target="_blank">
-                  <Button variant="outline" size="icon">
+                <Link href="https://www.linkedin.com/in/volodymyr-pavlenko-a7a336176/" target="_blank">
+                  <Button variant="outline" size="icon" className="cursor-pointer">
                     <Linkedin className="h-4 w-4" />
                     <span className="sr-only">LinkedIn</span>
                   </Button>
                 </Link>
-                <Link href="https://twitter.com" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <Twitter className="h-4 w-4" />
-                    <span className="sr-only">Twitter</span>
-                  </Button>
-                </Link>
-                <Link href="mailto:hello@example.com">
-                  <Button variant="outline" size="icon">
+                <Link href="mailto:solaryasha@gmail.com">
+                  <Button variant="outline" size="icon" className="cursor-pointer">
                     <Mail className="h-4 w-4" />
                     <span className="sr-only">Email</span>
                   </Button>
