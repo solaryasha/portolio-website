@@ -18,9 +18,9 @@ export default function Page() {
               <Link href="#about" className="transition-colors hover:text-foreground/80">
                 About
               </Link>
-              <Link href="#projects" className="transition-colors hover:text-foreground/80">
+              {/* <Link href="#projects" className="transition-colors hover:text-foreground/80">
                 Projects
-              </Link>
+              </Link> */}
               <Link href="#contact" className="transition-colors hover:text-foreground/80">
                 Contact
               </Link>
