@@ -6,7 +6,7 @@ import ContactForm from "@/components/contact-form"
 import IntroductionCard from '@/components/introduction-card'
 
 export default function Page() {
-  return <div>
+  return <div className='max-w-5xl'>
     <IntroductionCard />
   </div>;
   // return (
