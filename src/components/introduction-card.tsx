@@ -5,7 +5,7 @@ import image from '../../public/pictureOfMe.jpeg'
 
 export default function IntroductionCard() {
   return (
-    <Card className="overflow-hidden p-4 flex-row w-2xl m-auto">
+    <Card className="overflow-hidden p-4 flex-row w-2xl m-auto mb-8">
       <div className="relative aspect-video">
         <Image
           alt="a picture of me standing in the Hudson River near the bay in New York City."
