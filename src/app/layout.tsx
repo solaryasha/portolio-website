@@ -4,6 +4,8 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import type React from "react" // Import React
+import { Sidebar, SidebarProvider } from '@/components/ui/sidebar'
+import { AppSidebar } from '@/components/app-sidebar'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,11 +21,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-
       <body className={cn("min-h-screen bg-background font-sans antialiased", inter.className)}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
+      <SidebarProvider>
+        <div className="flex h-screen w-full bg-gray-100">
+          <AppSidebar />
+          <div className="flex flex-col w-full h-full ml-64 p-4">
+            {children}
+          </div>
+        </div>
+        </SidebarProvider>
       </body>
     </html>
   )
