@@ -33,12 +33,12 @@ export function AppSidebar() {
       <SidebarHeader />
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Volodymyr Pavlenko</SidebarGroupLabel>
+          <SidebarGroupLabel className='uppercase mb-4'>Volodymyr Pavlenko</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navigationItems.map(item => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild className='uppercase'>
                     <a href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>

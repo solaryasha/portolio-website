@@ -3,10 +3,12 @@ import { Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 import TechStack from "@/components/tech-stack"
 import ContactForm from "@/components/contact-form"
-// import ProjectCard from "./components/project-card"
+import IntroductionCard from '@/components/introduction-card'
 
 export default function Page() {
-  return <div>Home Page</div>;
+  return <div>
+    <IntroductionCard />
+  </div>;
   // return (
   //   <div className="min-h-screen bg-background">
   //     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
