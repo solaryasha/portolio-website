@@ -33,7 +33,7 @@ export function AppSidebar() {
       <SidebarHeader />
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className='uppercase mb-4'>Volodymyr Pavlenko</SidebarGroupLabel>
+          <SidebarGroupLabel className='uppercase mb-4 text-base text-teal-700 font-bold tracking-wide'>Volodymyr Pavlenko</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navigationItems.map(item => (

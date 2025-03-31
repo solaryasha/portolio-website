@@ -1,8 +1,3 @@
-import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail } from "lucide-react"
-import Link from "next/link"
-import TechStack from "@/components/tech-stack"
-import ContactForm from "@/components/contact-form"
 import IntroductionCard from '@/components/introduction-card'
 
 export default function Page() {

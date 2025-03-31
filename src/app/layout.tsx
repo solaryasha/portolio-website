@@ -10,7 +10,7 @@ import { AppSidebar } from '@/components/app-sidebar'
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "solaryasha.dev - Full Stack Developer",
+  title: "solaryasha.com - full-stack engineer",
   description: "Full stack developer portfolio showcasing projects and skills",
 }
 
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body className={cn("min-h-screen bg-background font-sans antialiased", inter.className)}>
       <SidebarProvider>
-        <div className="flex h-screen w-full bg-gray-100">
+        <div className="flex h-screen w-full">
           <AppSidebar />
           <div className="flex flex-col w-full h-full ml-64 p-4">
             {children}
