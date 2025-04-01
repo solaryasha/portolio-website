@@ -11,7 +11,8 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-import { User, Home } from "lucide-react"
+import { User, Home, Github, Linkedin, Mail } from "lucide-react"
+import SidebarGroupComponent from './ui/sidebar-group'
 
 
 const navigationItems = [
@@ -25,6 +26,27 @@ const navigationItems = [
     url: "/about",
     icon: User
   },
+]
+
+const socialLinksItems = [
+  {
+    title: "Linkedin",
+    url: "https://www.linkedin.com/in/volodymyr-pavlenko-a7a336176/",
+    icon: Linkedin,
+    openInNewWindow: true
+  },
+  {
+    title: "Github",
+    url: "https://github.com/solaryasha",
+    icon: Github,
+    openInNewWindow: true
+  },
+  {
+    title: "Gmail",
+    url: "mailto:solaryasha@gmail.com",
+    icon: Mail,
+    openInNewWindow: true
+  }
 ]
 
 export function AppSidebar() {
@@ -49,6 +71,7 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+        <SidebarGroupComponent headerText='Find me in' menuItems={socialLinksItems}/>
       </SidebarContent>
       <SidebarFooter />
     </Sidebar>
