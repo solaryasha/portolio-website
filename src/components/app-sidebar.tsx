@@ -2,13 +2,7 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
 import { User, Home, Github, Linkedin, Mail } from "lucide-react"
@@ -54,23 +48,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader />
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel className='uppercase mb-4 text-base text-teal-700 font-bold tracking-wide'>Volodymyr Pavlenko</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {navigationItems.map(item => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild className='uppercase'>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+        <SidebarGroupComponent headerText='Volodymyr Pavlenko' menuItems={navigationItems} />
         <SidebarGroupComponent headerText='Find me in' menuItems={socialLinksItems}/>
       </SidebarContent>
       <SidebarFooter />
