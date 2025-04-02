@@ -19,7 +19,7 @@ export default function IntroductionCard() {
       </div>
       <CardContent className="p-4">
         <h3 className="font-semibold text-xl mb-4">Hi, my name is Volodymyr Pavlenko 👋</h3>
-        <p className="text-l mb-4">I'm based in New Jersey and work as a full-stack engineer.</p>
+        <p className="text-l mb-4">I&apos;m based in New Jersey and work as a full-stack engineer.</p>
         <p className="text-l mb-4">Welcome to my place !</p>
       </CardContent>
     </Card>
