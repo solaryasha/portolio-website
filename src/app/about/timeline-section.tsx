@@ -36,28 +36,28 @@ export default function TimelineSection() {
 
   return (
     <div className="relative">
-      <h2 className="text-xl font-bold mb-8 uppercase text-teal-700 tracking-wide">
+      <h2 className="text-lg sm:text-xl font-bold mb-6 sm:mb-8 uppercase text-teal-700 tracking-wide">
         Timeline
       </h2>
-      <div className="relative border-l-2 border-gray-300 pl-8 mx-4">
+      <div className="relative border-l-2 border-gray-300 pl-4 sm:pl-8 ml-2 sm:mx-4">
         {timelineItems.map((item, index) => (
-          <div key={index} className="mb-8 flex items-start">
-            <div className="absolute -left-4 w-8 h-8 flex items-center justify-center bg-teal-700 text-white font-bold rounded-full overflow-hidden border border-gray-300">
+          <div key={index} className="mb-6 sm:mb-8 flex items-start">
+            <div className="absolute -left-3 sm:-left-4 w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center bg-teal-700 text-white font-bold rounded-full overflow-hidden border border-gray-300">
               <Image
                 src={item.icon}
                 alt={`${item.title} icon`}
                 width={48}
                 height={48}
                 quality={100}
-                priority={index < 2}
+                priority
                 className="object-cover w-full h-full"
               />
             </div>
             <div className='-mt-1'>
-              <h3 className="text-lg font-bold text-teal-700">{item.title}</h3>
-              <p className="text-sm text-gray-500">{item.date}</p>
-              <div className="text-[1.1rem] text-gray-700 mt-2">
-                <ul className="ml-0 list-disc pl-5">
+              <h3 className="text-base sm:text-lg font-bold text-teal-700">{item.title}</h3>
+              <p className="text-xs sm:text-sm text-gray-500">{item.date}</p>
+              <div className="text-sm sm:text-[1.1rem] text-gray-700 mt-2">
+                <ul className="ml-0 list-disc pl-4 sm:pl-5">
                   {item.description.map((descItem) => (
                     <li key={descItem} className="mb-1">
                       {descItem}
