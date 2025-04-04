@@ -1,4 +1,5 @@
 import AboutMeHeader from './about-me-header';
+import HowIGotHereSection from './how-i-got-here-section';
 import TimelineSection from './timeline-section';
 
 export default function Page() {
@@ -7,6 +8,7 @@ export default function Page() {
       <AboutMeHeader />
       <hr className='my-6'/>
       <TimelineSection />
+      <HowIGotHereSection />
     </div>
   );
 }
