@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/sidebar"
 
 interface Props {
-  headerText: string;
+  headerText?: string;
   menuItems: MenuItem[]
 }
 
@@ -23,9 +23,11 @@ export default function SidebarGroupComponent(props: Props) {
   const { headerText, menuItems } = props;
   return (
     <SidebarGroup>
+      {headerText && (
       <SidebarGroupLabel className='uppercase mb-4 text-base text-teal-700 font-bold tracking-wide'>
         {headerText}
       </SidebarGroupLabel>
+      )}
       <SidebarGroupContent>
         <SidebarMenu>
           {menuItems.map(item => (

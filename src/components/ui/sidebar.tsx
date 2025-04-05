@@ -3,7 +3,7 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"
-import { PanelLeftIcon } from "lucide-react"
+import { PanelLeftIcon, X } from "lucide-react"
 
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
@@ -333,13 +333,32 @@ function SidebarInput({
 }
 
 function SidebarHeader({ className, ...props }: React.ComponentProps<"div">) {
+  const { isMobile, setOpenMobile } = useSidebar()
+
   return (
     <div
       data-slot="sidebar-header"
       data-sidebar="header"
-      className={cn("flex flex-col gap-2 p-2", className)}
+      className={cn(
+        "flex flex-col gap-2 p-2 mt-4",
+        isMobile && "flex-row items-center justify-between",
+        className
+      )}
       {...props}
-    />
+    >
+      {props.children}
+      {isMobile && (
+        <Button
+          variant="ghost"
+          size="icon"
+          className="size-8 shrink-0 ml-auto"
+          onClick={() => setOpenMobile(false)}
+          aria-label="Close sidebar"
+        >
+          <X className="size-5" />
+        </Button>
+      )}
+    </div>
   )
 }
 

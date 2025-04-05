@@ -8,7 +8,6 @@ import {
 import { User, Home, Github, Linkedin, Mail } from "lucide-react"
 import SidebarGroupComponent from './ui/sidebar-group'
 
-
 const navigationItems = [
   {
     title: "Home",
@@ -45,10 +44,12 @@ const socialLinksItems = [
 
 export function AppSidebar() {
   return (
-    <Sidebar>
-      <SidebarHeader />
+    <Sidebar collapsible='icon'>
+      <SidebarHeader>
+        <h1 className="font-bold uppercase text-teal-700 px-2">Volodymyr Pavlenko</h1>
+      </SidebarHeader>
       <SidebarContent>
-        <SidebarGroupComponent headerText='Volodymyr Pavlenko' menuItems={navigationItems} />
+        <SidebarGroupComponent menuItems={navigationItems} />
         <SidebarGroupComponent headerText='Find me in' menuItems={socialLinksItems}/>
       </SidebarContent>
       <SidebarFooter />
